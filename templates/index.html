@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign in</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <main class="login-wrap">
+    <form class="login-card" id="loginForm" novalidate>
+      <div class="logo">Jaifore</div>
+
+      <!-- Step 1: email -->
+      <div class="step" id="emailStep">
+        <h1 class="title">Sign in</h1>
+
+        <div class="field field-line">
+          <input type="email" id="email" name="email" placeholder="Email, phone, or Skype" autocomplete="username" required>
+          <span class="error-msg" id="emailError"></span>
+        </div>
+
+        <p class="helper-line">No account? <a href="signup.html" class="helper-link">Create one!</a></p>
+        <p class="helper-line"><a href="#" class="helper-link">Can't access your account?</a></p>
+
+        <div class="btn-row">
+          <button type="button" class="signin-btn small-btn" id="nextBtn">
+            <span class="btn-text">Next</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Step 2: password -->
+      <div class="step hidden" id="passwordStep">
+        <h1 class="title">Enter password</h1>
+        <p class="subtitle email-display" id="emailDisplay"></p>
+
+        <div class="field">
+          <input type="password" id="password" name="password" placeholder="Password" autocomplete="current-password" required>
+          <span class="error-msg" id="passwordError"></span>
+        </div>
+
+        <div class="row-between">
+          <label class="remember">
+            <input type="checkbox" id="remember" name="remember">
+            <span>Remember me</span>
+          </label>
+          <a href="#" class="forgot-link">Forgot password?</a>
+        </div>
+
+        <div class="btn-row">
+          <button type="button" class="back-btn" id="backBtn">Back</button>
+          <button type="submit" class="signin-btn" id="signinBtn">
+            <span class="btn-text">Sign in</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+
+      <p class="form-status" id="formStatus" role="alert"></p>
+    </form>
+
+    <div class="signin-options" id="signinOptions">
+      <a href="#" class="signin-options-link">
+        <span class="signin-options-icon" aria-hidden="true">
+          <img src="assets/key-icon.png" alt="" width="18" height="18">
+        </span>
+        <span>Sign-in options</span>
+      </a>
+    </div>
+  </main>
+
+  <footer class="page-footer">
+    <a href="#" class="footer-link">Terms of use</a>
+    <a href="#" class="footer-link">Privacy &amp; cookies</a>
+    <span class="footer-more" aria-hidden="true">&#8943;</span>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="scripts/supabaseClient.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+</html>

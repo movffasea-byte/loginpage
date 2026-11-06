@@ -1,0 +1,1 @@
+Key.num_lockKey.caps_lockKey.cmdKey.ctrl_rKey.caps_lockKey.shiftKey.cmdKey.caps_lockKey.shiftKey.f4
